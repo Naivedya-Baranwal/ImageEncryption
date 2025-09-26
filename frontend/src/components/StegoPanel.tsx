@@ -86,7 +86,7 @@ export default function StegoPanel() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `stego-${Date.now()}.png`;
+      a.download = `encryptedImage-${Date.now()}.png`;
       a.click();
       window.URL.revokeObjectURL(url);
       
@@ -126,7 +126,6 @@ export default function StegoPanel() {
         } else {
           toast.error(data.message || data.error || "Failed to decrypt");
         }
-        
         setResult("Error: " + (data.error || JSON.stringify(data)));
       } else {
         toast.success("Message decrypted successfully!");

@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# backend/py_scripts/stego_aes_lsb_cli.py
-# pip install cryptography opencv-python numpy
-
 import sys, os, argparse
 import cv2, struct, secrets
 import numpy as np
